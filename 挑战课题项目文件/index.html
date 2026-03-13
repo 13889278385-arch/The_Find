@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>失物招领-云端正式版</title>
+    <style>
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background-color: #f5f7fa; color: #333; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; }
+        h1 { text-align: center; color: #007bff; margin-bottom: 30px; }
+        h3 { margin-top: 0; color: #444; border-left: 4px solid #007bff; padding-left: 10px; }
+        input { display: block; width: 100%; padding: 12px; margin: 15px 0; border: 1px solid #dee2e6; border-radius: 8px; box-sizing: border-box; font-size: 14px; transition: border 0.3s; }
+        input:focus { border-color: #007bff; outline: none; }
+        button { background: #007bff; color: white; border: none; padding: 12px; border-radius: 8px; cursor: pointer; width: 100%; font-size: 16px; font-weight: 600; transition: background 0.3s; }
+        button:hover { background: #0056b3; }
+        .item-list-container { margin-top: 20px; }
+        .item { background: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; border: 1px solid #eee; position: relative; transition: transform 0.2s; }
+        .item:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .item strong { color: #007bff; }
+        .delete-btn { position: absolute; right: 15px; top: 15px; background: #ff4d4f; width: auto; padding: 5px 12px; font-size: 12px; }
+        .delete-btn:hover { background: #d9363e; }
+    </style>
+</head>
+<body>
+    <h1>校园失物招领系统</h1>
+
+    <div class="card">
+        <h3>发布寻物/招领</h3>
+        <input type="text" id="itemName" placeholder="捡到了/丢失了什么？">
+        <input type="text" id="itemInfo" placeholder="地点（例如：一号楼 A203）">
+        <button onclick="publishItem()">立即发布到云端</button>
+    </div>
+
+    <h3>最新发布</h3>
+    <div id="itemList" class="item-list-container">正在同步云端数据...</div>
+
+    <script>
+        // --- 核心配置：你的华为云公网 IP ---
+        const SERVER_IP = '113.44.127.220'; 
+        const API_URL = `http://${SERVER_IP}:5000/api/items`;
+
+        // 1. 获取列表
+        async function fetchItems() {
+            try {
+                const res = await fetch(API_URL);
+                if (!res.ok) throw new Error('网络异常');
+                const items = await res.json();
+                const listDiv = document.getElementById('itemList');
+                
+                if (items.length === 0) {
+                    listDiv.innerHTML = '<p style="text-align:center; color:#999;">暂无数据，快来发布第一条吧！</p>';
+                    return;
+                }
+
+                listDiv.innerHTML = items.map(item => `
+                    <div class="item">
+                        <strong>物品：</strong>${item.name}<br>
+                        <strong>地点：</strong>${item.location}
+                        <button class="delete-btn" onclick="deleteItem(${item.id})">删除</button>
+                    </div>
+                `).join('');
+            } catch (e) {
+                document.getElementById('itemList').innerHTML = `<p style="color:red; text-align:center;">无法连接到服务器 (${e.message})<br>请确认 5000 端口已开放</p>`;
+            }
+        }
+
+        // 2. 发布数据
+        async function publishItem() {
+            const name = document.getElementById('itemName').value;
+            const info = document.getElementById('itemInfo').value;
+
+            if (!name || !info) return alert('请填写完整信息！');
+
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, info })
+                });
+                
+                if (res.ok) {
+                    document.getElementById('itemName').value = '';
+                    document.getElementById('itemInfo').value = '';
+                    fetchItems(); // 刷新列表
+                }
+            } catch (e) {
+                alert('发布失败，请检查网络连接');
+            }
+        }
+
+        // 3. 删除记录
+        async function deleteItem(id) {
+            if (!confirm('确定要删除这条记录吗？')) return;
+            try {
+                const res = await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
+                if (res.ok) fetchItems();
+            } catch (e) {
+                alert('删除失败');
+            }
+        }
+
+        // 初始化加载
+        fetchItems();
+    </script>
+</body>
+</html>
