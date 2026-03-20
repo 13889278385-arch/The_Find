@@ -1,0 +1,104 @@
+/* 招领/寻物表单通用样式 */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    font-size: 36px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.page-title img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.form-container {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: #f5faf5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.upload-area {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.upload-area .plus {
+    font-size: 60px;
+    color: #999;
+    font-weight: 100;
+}
+
+.upload-area .text {
+    font-size: 24px;
+    color: #999;
+}
+
+.form-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #666;
+    background-color: #eee;
+}
+
+.form-textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    align-self: flex-end;
+    padding: 8px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    color: #2da44e;
+    cursor: pointer;
+}
+
+.submit-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.page-slogan {
+    text-align: center;
+    font-size: 32px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    margin: 30px 0;
+    color: #333;
+}

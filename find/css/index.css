@@ -1,0 +1,58 @@
+/* 启动页全屏样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px; 
+}
+
+/* Logo 样式 */
+.loading-logo img {
+    width: 800px;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* LOADING 文字样式 */
+.loading-text {
+    font-size: 52px;
+    font-weight: 700;
+    color: #6378f5;
+    letter-spacing: 4px;
+    will-change: opacity;
+    margin: 0;
+}
+
+/* 标语样式 */
+.loading-slogan {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.loading-slogan p:first-child {
+    font-size: 28px;
+    color: #222;
+}
+
+.loading-slogan p:last-child {
+    font-size: 22px;
+    color: #333;
+    font-style: italic;
+}

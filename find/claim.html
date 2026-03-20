@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光 FIND - 我要招领</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <div class="header">
+        <div class="logo-area">
+            <img src="img/smalllogo.png" alt="拾光 Logo" class="logo">
+            <div class="slogan-text">拾得美好，寻回温暖</div>
+        </div>
+        <div class="nav-menu">
+            <a href="home.html">首页</a>
+            <a href="claim.html" class="active">我要招领</a>
+            <a href="lost.html">我要寻物</a>
+            <a href="search.html">智能检索</a>
+            <a href="public.html">最新公示</a>
+        </div>
+        <div class="user-area">
+            <img src="img/me.png" alt="用户图标" class="user-icon">
+            <a href="#">我的</a>
+            <a href="#">注册</a>
+            <span class="divider">/</span>
+            <a href="#">登录</a>
+        </div>
+    </div>
+
+    <!-- 页面标题 -->
+    <div class="page-title">
+        <img src="img/zhaoling.png" alt="我要招领图标">
+        我要招领
+    </div>
+
+    
+    <div class="form-container">
+        <div class="upload-area" id="uploadArea">
+            <div class="plus">+</div>
+            <div class="text">上传图片</div>
+            <input type="file" id="fileInput" accept="image/*" hidden>
+        </div>
+        <div class="form-fields">
+            <input type="text" placeholder="物品名称" class="form-input">
+            
+            <!-- 物品类别下拉框 + 其他输入框 -->
+            <select class="form-select" id="goodsTypeSelect">
+                <option value="">物品类别（下拉选择）</option>
+                <option value="electronic">电子产品</option>
+                <option value="certificate">证件卡片</option>
+                <option value="clothes">服饰配饰</option>
+                <option value="key">钥匙</option>
+                <option value="supplies">学习用品</option>
+                <option value="other">其他</option>
+            </select>
+            <input type="text" placeholder="请输入具体物品类型" class="form-input" id="otherTypeInput" style="display: none;">
+            
+            <!-- 捡到地点下拉框 + 其他输入框 -->
+            <select class="form-select" id="pickPlaceSelect">
+                <option value="">捡到地点（下拉选择）</option>
+                <option value="teachingA">一号教学楼</option>
+                <option value="library">图书馆</option>
+                <option value="canteenone">一食堂</option>
+                <option value="canteentwo">二食堂</option>
+                <option value="dormone">一舍</option>
+                <option value="dormtwo">二舍</option>
+                <option value="dormthree">三舍</option>
+                <option value="dormsix">六舍</option>
+                <option value="other">其他</option>
+            </select>
+            <input type="text" placeholder="请输入具体捡到地点" class="form-input" id="otherPlaceInput" style="display: none;">
+            
+            <input type="datetime-local" class="form-input" placeholder="捡到时间">
+            <textarea placeholder="物品描述（备注）" class="form-textarea"></textarea>
+            <button class="submit-btn" id="submitBtn">
+                <img src="img/submit.png" alt="提交图标">
+                提交
+            </button>
+        </div>
+    </div>
+
+    <!-- 页面标语 + 底部版权 -->
+    <div class="page-slogan">
+        捡到物品，帮助他人寻回温暖
+    </div>
+    <div class="footer">
+        <p>© 2025 拾光 FIND 版权所有</p>
+        <div class="footer-links">
+            <a href="#">关于我们</a> | <a href="#">隐私政策</a>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

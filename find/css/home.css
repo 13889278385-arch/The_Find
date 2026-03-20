@@ -1,0 +1,45 @@
+/* 功能区：占满剩余空间 + 整体下移 */
+.function-grid {
+  flex: 1; /* 占满中间所有空间 */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.function-card {
+  border: 2px dashed #add8e6;
+  border-radius: 20px;
+  background-color: #f5faf5;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.function-card:hover {
+  transform: scale(1.02);
+  border-color: #6378f5;
+}
+
+/* 功能卡片图标 */
+.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* 功能卡片标题：泡泡字体风格 */
+.function-card .title {
+  font-size: 36px;
+  font-family: 'BubbleFont', STHeiti, Microsoft YaHei, sans-serif; /* 泡泡黑体 */
+  font-weight: bold;
+}

@@ -1,0 +1,170 @@
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Microsoft Yahei", sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  min-width: 1200px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部导航栏 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  border-bottom: 2px solid #333;
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 1200px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 80px !important; 
+  width: auto;
+  flex-shrink: 0;
+}
+
+.slogan-text {
+  font-size: 32px;
+  font-family: KaiTi, "华文楷体", "楷体", serif;
+  color: #333;
+  line-height: 80px !important; 
+  flex-shrink: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 25px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-menu a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* 用户区域 */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.user-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.divider {
+  color: #333;
+  margin: 0 2px;
+}
+
+.user-area a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 功能区 */
+.function-grid {
+  flex: 1 !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  max-width: 900px;
+  width: 900px;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.function-card {
+  border: 2px dashed #add8e6;
+  border-radius: 20px;
+  background-color: #f5faf5;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.function-card:hover {
+  transform: scale(1.02);
+  border-color: #6378f5;
+}
+
+.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  flex-shrink: 0;
+}
+
+/* 功能卡片标题*/
+.function-card .title {
+  font-size: 36px;
+  font-family: "微软雅黑", SimHei, "黑体", sans-serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 #000;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  flex-shrink: 0;
+}
+
+/* 底部 */
+.footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #333;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: auto;
+  width: 100%;
+  min-width: 1200px;
+}
+
+.footer-links {
+  margin-top: 5px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+}

@@ -1,0 +1,71 @@
+/* 最新公示页基础样式 */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 25px;
+    font-size: 38px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* 核心 */
+.public-content {
+    width: 1400px;
+    margin: 40px auto 60px;
+    padding: 100px 120px;
+    background-color: #e8f5e9;
+    border-radius: 30px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 标题样式 */
+.public-main-title {
+    font-size: 56px;
+    color: #e65c5c;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    margin: 0 0 50px 0;
+}
+
+/* 标签栏样式 */
+.public-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    margin-bottom: 50px;
+    font-size: 28px;
+    color: #333;
+    font-family: "Microsoft Yahei", sans-serif;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+/* 跳转标签样式 */
+.tab-item {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.tab-item:hover {
+    text-decoration: underline;
+}
+
+/* 描述文本样式*/
+.public-desc {
+    font-size: 36px;
+    color: #666;
+    line-height: 2;
+    text-align: left;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    white-space: normal;
+    text-indent: 2em;
+}
