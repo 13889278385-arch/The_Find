@@ -1,0 +1,120 @@
+/* ============================================================
+   form.css
+   作用：我要招领 / 我要寻物 两个表单页的专用样式。
+   ============================================================ */
+
+/* 页面标题区：图标 + 标题文字横向排列。 */
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 30px;
+    font-size: 36px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 标题图标大小控制。 */
+.page-title img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* 表单主容器：左右两栏，左边上传图片区，右边输入区。 */
+.form-container {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    background-color: #f5faf5;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 图片上传区域的占位框。 */
+.upload-area {
+    width: 220px;
+    height: 220px;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* 加号提示图形。 */
+.upload-area .plus {
+    font-size: 60px;
+    color: #999;
+    font-weight: 100;
+}
+
+/* “上传图片”说明文字。 */
+.upload-area .text {
+    font-size: 24px;
+    color: #999;
+}
+
+/* 右侧输入区域纵向排列。 */
+.form-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 文本框、下拉框、文本域统一视觉风格。 */
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #666;
+    background-color: #eee;
+}
+
+/* 文本域高度固定，并且禁止用户手动拖拽，避免布局变形。 */
+.form-textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* 提交按钮样式。 */
+.submit-btn {
+    align-self: flex-end;
+    padding: 8px 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 22px;
+    color: #2da44e;
+    cursor: pointer;
+}
+
+/* 提交按钮中的图标。 */
+.submit-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* 页面底部口号。 */
+.page-slogan {
+    text-align: center;
+    font-size: 32px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    margin: 30px 0;
+    color: #333;
+}

@@ -1,0 +1,53 @@
+/* ============================================================
+   home.css
+   作用：首页四宫格功能区样式。
+   ============================================================ */
+
+/* 功能区网格：2 列排列，自动占据页面中间主要空间。 */
+.function-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* 单个功能卡片：带虚线边框和悬停动效。 */
+.function-card {
+  border: 2px dashed #add8e6;
+  border-radius: 20px;
+  background-color: #f5faf5;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 鼠标悬停时稍微放大，并把边框颜色加深。 */
+.function-card:hover {
+  transform: scale(1.02);
+  border-color: #6378f5;
+}
+
+/* 功能图标。 */
+.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* 功能卡片标题：采用较大的粗体字，增强入口感。 */
+.function-card .title {
+  font-size: 36px;
+  font-family: 'BubbleFont', STHeiti, Microsoft YaHei, sans-serif;
+  font-weight: bold;
+  color: #222;
+}

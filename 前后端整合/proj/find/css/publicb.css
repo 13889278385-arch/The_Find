@@ -1,0 +1,114 @@
+/* ============================================================
+   publicb.css
+   作用：公示子页面通用样式。
+   被以下页面复用：
+   - find.html
+   - place.html
+   - returned.html
+   - notice.html
+   ============================================================ */
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 25px;
+    font-size: 38px;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.title-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* 绿色内容容器，是整页视觉主体。 */
+.public-content {
+    width: 1400px;
+    margin: 40px auto 60px;
+    padding: 60px 80px;
+    background-color: #e8f5e9;
+    border-radius: 30px;
+    text-align: left;
+}
+
+/* 页面主标题。 */
+.public-main-title {
+    font-size: 60px;
+    color: #e65c5c;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+/* 顶部标签栏。 */
+.public-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #333;
+    font-family: "Microsoft Yahei", sans-serif;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.tab-item {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+/* 当前页标签高亮。 */
+.tab-item.active {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.tab-item:hover {
+    text-decoration: underline;
+}
+
+/* 子标题。 */
+.content-subtitle {
+    font-size: 36px;
+    color: #555;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+/* 有序列表展示区。 */
+.content-list {
+    font-size: 36px;
+    color: #666;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    line-height: 1.6;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* 普通说明文本。 */
+.content-desc {
+    font-size: 36px;
+    color: #666;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+    text-indent: 2em;
+}
+
+/* 底部红色提示。 */
+.content-tip {
+    font-size: 32px;
+    color: #e65c5c;
+    font-family: KaiTi, "华文楷体", "楷体", serif;
+    text-align: center;
+}

@@ -1,0 +1,62 @@
+/* ============================================================
+   auth.css
+   作用：登录页 / 注册页样式。
+   ============================================================ */
+
+/* 表单整体容器，居中显示。 */
+.auth-wrapper {
+    width: min(520px, 92vw);
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 24px;
+    padding: 34px 32px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* 表单标题。 */
+.auth-title {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* 表单整体使用纵向排列。 */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 输入框统一样式。 */
+.auth-input {
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-size: 16px;
+}
+
+/* 提交按钮。 */
+.auth-submit {
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7ca8ff, #6378f5);
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* 底部提示，例如“已有账号？去登录”。 */
+.auth-tip {
+    margin-top: 16px;
+    text-align: center;
+    color: #666;
+}
+
+.auth-tip a {
+    color: #6378f5;
+    text-decoration: none;
+}

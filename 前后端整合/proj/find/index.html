@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 页面字符集，确保中文正常显示 -->
+    <meta charset="UTF-8">
+    <!-- 移动端适配视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拾光 FIND - 启动页</title>
+
+    <!-- 启动页专用样式 -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- 预加载大图和样式，加快首屏显示 -->
+    <link rel="preload" href="img/logo.png" as="image">
+    <link rel="preload" href="css/common.css" as="style">
+</head>
+<body>
+    <!-- 启动页主内容：Logo + Loading + 标语 -->
+    <div class="loading-container">
+        <div class="loading-logo">
+            <img src="img/logo.png" alt="拾光 FIND Logo">
+        </div>
+        <div class="loading-text">LOADING</div>
+        <div class="loading-slogan">
+            <p>拾光FIND 拾得美好 寻回温暖</p>
+            <p>gather the moments, find the warmth.</p>
+        </div>
+    </div>
+
+    <!-- 公共脚本：提供 jumpToPage 等基础功能 -->
+    <script src="js/common.js"></script>
+    <!-- 启动页专用脚本：控制淡入淡出和自动跳转 -->
+    <script src="js/index.js"></script>
+</body>
+</html>

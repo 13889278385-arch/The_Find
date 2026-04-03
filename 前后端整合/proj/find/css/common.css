@@ -1,0 +1,146 @@
+/* ============================================================
+   common.css
+   作用：全站通用样式文件。
+   这里统一定义：
+   1. 页面基础重置
+   2. 整体布局
+   3. 顶部导航栏
+   4. 底部版权区
+   这些样式会被多个页面复用。
+   ============================================================ */
+
+/* 全局重置：清除浏览器默认边距，统一盒模型，避免不同浏览器默认样式差异。 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body 作为整站外层容器：
+   - 使用纵向 flex 布局，方便页脚始终靠底部
+   - 设置最小高度为视口高度，保证页面至少撑满一屏 */
+body {
+  font-family: "Microsoft YaHei", sans-serif;
+  background-color: #f8f8f8;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 顶部导航栏外层：左右布局，三块分别是 logo、导航、用户区。 */
+.header {
+  min-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  border-bottom: 2px solid #333;
+  background-color: #fff;
+}
+
+/* 左侧 Logo 区域：图标和标语横向排列。 */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Logo 图片尺寸固定，避免不同比例图片撑坏布局。 */
+.logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+/* 网站口号文字。 */
+.slogan-text {
+  font-size: 22px;
+  font-family: KaiTi, "华文楷体", "楷体", serif;
+  font-weight: bold;
+}
+
+/* 中间导航菜单。 */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* 导航链接的基础样式。 */
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+/* 当前页高亮和鼠标悬停都统一使用下划线，方便用户识别所在位置。 */
+.nav-menu a:hover,
+.nav-menu a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* 右侧用户区。 */
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+/* 用户区链接样式。 */
+.user-area a {
+  text-decoration: none;
+  color: #333;
+}
+
+.user-area a:hover {
+  text-decoration: underline;
+}
+
+/* 用户头像图标。 */
+.user-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* 用户区分隔符“/”的颜色稍微淡一点。 */
+.divider {
+  color: #777;
+}
+
+/* 页面主体常用标题样式。 */
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 24px 30px;
+  font-size: 36px;
+  font-family: KaiTi, "华文楷体", "楷体", serif;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 底部版权区：放在页面底部，并与主体内容区拉开距离。 */
+.footer {
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #333;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: auto;
+  width: 100%;
+  min-width: 1200px;
+  background: #fff;
+}
+
+.footer-links {
+  margin-top: 5px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+}

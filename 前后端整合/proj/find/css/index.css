@@ -1,0 +1,65 @@
+/* ============================================================
+   index.css
+   作用：启动页（LOADING 页）样式。
+   ============================================================ */
+
+/* 重置基础样式，防止浏览器默认边距影响全屏居中。 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 启动页整体：水平 + 垂直居中。 */
+body {
+    font-family: "Microsoft Yahei", sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 启动页内容容器。 */
+.loading-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+/* Logo 图片放大展示，突出项目品牌。 */
+.loading-logo img {
+    width: 800px;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* LOADING 大字。 */
+.loading-text {
+    font-size: 52px;
+    font-weight: 700;
+    color: #6378f5;
+    letter-spacing: 4px;
+    will-change: opacity;
+    margin: 0;
+}
+
+/* 标语区域，放在 loading 字下方。 */
+.loading-slogan {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.loading-slogan p:first-child {
+    font-size: 28px;
+    color: #222;
+}
+
+.loading-slogan p:last-child {
+    font-size: 22px;
+    color: #333;
+    font-style: italic;
+}
