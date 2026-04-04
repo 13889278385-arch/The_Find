@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const otherTypeInput = document.getElementById('otherTypeInput');
     const pickPlaceSelect = document.getElementById('pickPlaceSelect');
     const otherPlaceInput = document.getElementById('otherPlaceInput');
-    const submitBtn = document.getElementById('submitBtn');
+    const submitBtn = document.getElementById('submitBtn');////////////
 
     // 通过当前页面路径判断：
     // - claim.html -> 招领 found
